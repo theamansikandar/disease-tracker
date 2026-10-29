@@ -13,7 +13,7 @@ PAGE = """<!doctype html><title>Disease Tracker v2</title>
 <style>body{font-family:sans-serif;max-width:560px;margin:40px auto}
 input,select,button{width:100%;padding:8px;margin:5px 0;box-sizing:border-box}
 .ok{background:#d4edda;padding:10px;border-radius:6px}</style>
-<h2>🦠 Disease Tracker <small>(v2 - Add &amp; View)</small></h2>
+<h2>Disease Tracker <small>(v2 - Add &amp; View)</small></h2>
 <p><a href="/">Add Case</a> | <a href="/cases">View Cases</a></p>
 {% if msg %}<div class=ok>{{msg}}</div>{% endif %}
 <form method=post>
@@ -39,7 +39,7 @@ def add():
 LIST = """<!doctype html><title>Cases v2</title>
 <style>body{font-family:sans-serif;max-width:900px;margin:40px auto}
 table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccc;padding:6px}th{background:#eee}</style>
-<h2>🦠 All Cases <small>(v2)</small></h2><p><a href="/">+ Add Case</a></p>
+<h2>All Cases <small>(v2)</small></h2><p><a href="/">+ Add Case</a></p>
 <table><tr><th>ID</th><th>Patient</th><th>Age</th><th>Disease</th><th>Location</th><th>Date</th><th>Status</th></tr>
 {% for r in rows %}<tr><td>{{r.id}}</td><td>{{r.patient}}</td><td>{{r.age}}</td><td>{{r.disease}}</td>
 <td>{{r.location}}</td><td>{{r.date}}</td><td>{{r.status}}</td></tr>
