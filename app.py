@@ -13,7 +13,7 @@ PAGE = """<!doctype html><title>Disease Tracker v3</title>
 <style>body{font-family:sans-serif;max-width:560px;margin:40px auto}
 input,select,button{width:100%;padding:8px;margin:5px 0;box-sizing:border-box}
 .ok{background:#d4edda;padding:10px;border-radius:6px}</style>
-<h2>🦠 Disease Tracker <small>(v3 - Add, View &amp; Filter)</small></h2>
+<h2>Disease Tracker <small>(v3 - Add, View &amp; Filter)</small></h2>
 <p><a href="/">Add Case</a> | <a href="/cases">View Cases</a></p>
 {% if msg %}<div class=ok>{{msg}}</div>{% endif %}
 <form method=post>
@@ -39,7 +39,7 @@ def add():
 LIST = """<!doctype html><title>Cases v3</title>
 <style>body{font-family:sans-serif;max-width:900px;margin:40px auto}
 table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccc;padding:6px}th{background:#eee}</style>
-<h2>🦠 All Cases <small>(v3)</small></h2><p><a href="/">+ Add Case</a></p>
+<h2>All Cases <small>(v3)</small></h2><p><a href="/">+ Add Case</a></p>
 <form method=get style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">
 <input name=location placeholder="Filter by location" value="{{q.location}}">
 <label>From <input type=date name=date_from value="{{q.date_from}}"></label>
