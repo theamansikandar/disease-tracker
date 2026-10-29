@@ -13,7 +13,7 @@ PAGE = """<!doctype html><title>Disease Tracker v1</title>
 <style>body{font-family:sans-serif;max-width:560px;margin:40px auto}
 input,select,button{width:100%;padding:8px;margin:5px 0;box-sizing:border-box}
 .ok{background:#d4edda;padding:10px;border-radius:6px}</style>
-<h2>🦠 Disease Tracker <small>(v1 - Add Cases)</small></h2>
+<h2>Disease Tracker <small>(v1 - Add Cases)</small></h2>
 {% if msg %}<div class=ok>{{msg}}</div>{% endif %}
 <form method=post>
 <input name=patient placeholder="Patient name" required>
