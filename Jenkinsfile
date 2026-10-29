@@ -4,7 +4,7 @@ pipeline {
     choice(name: 'VERSION', choices: ['v1', 'v2', 'v3'], description: 'Branch / image tag to build')
   }
   environment {
-    DOCKER_USER = 'YOUR_DOCKERHUB_USERNAME'
+    DOCKER_USER = 'theamansikandar'
     IMAGE       = "${DOCKER_USER}/disease-tracker"
     REPO_URL    = 'https://github.com/YOUR_GITHUB_USERNAME/disease-tracker.git'
   }
