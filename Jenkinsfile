@@ -4,10 +4,11 @@ pipeline {
     choice(name: 'VERSION', choices: ['v1', 'v2', 'v3'], description: 'Branch / image tag to build')
   }
   environment {
-    DOCKER_USER = 'theamansikandar'
-    IMAGE       = "${DOCKER_USER}/disease-tracker"
-    REPO_URL    = 'https://github.com/YOUR_GITHUB_USERNAME/disease-tracker.git'
-  }
+  DOCKER_USER = 'theamansikandar'
+  IMAGE       = "${DOCKER_USER}/disease-tracker"
+  REPO_URL    = 'https://github.com/theamansikandar/disease-tracker.git'
+  PATH        = "/usr/local/bin:/opt/homebrew/bin:/Applications/Docker.app/Contents/Resources/bin:${env.PATH}"
+}
   stages {
     stage('Checkout') {
       steps { git branch: params.VERSION, url: env.REPO_URL }
